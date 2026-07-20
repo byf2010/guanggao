@@ -1,0 +1,16 @@
+{
+  "name": "guanggao",
+  "version": "1.0.0",
+  "description": "18禁视频网站广告位招租",
+  "scripts": {
+    "dev": "npx http-server -p 3000",
+    "build": "echo 'Static HTML - no build step required'",
+    "test": "echo 'No tests configured'"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@vercel/analytics": "^2.0.1"
+  }
+}
