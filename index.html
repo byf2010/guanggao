@@ -1,22 +1,9 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>18禁视频网站广告位招租</title>
-<script>
-var _hmt = _hmt || [];
-(function() {
-  var hm = document.createElement("script");
-  hm.src = "https://hm.baidu.com/hm.js?4d2cd513dfe97aab3119661a69c3561b";
-  var s = document.getElementsByTagName("script")[0]; 
-  s.parentNode.insertBefore(hm, s);
-})();
-</script>
-</head>
-<body>
-
-</body>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>点击进入 · </title>
 <script>
 var _hmt = _hmt || [];
 (function() {
@@ -26,5 +13,355 @@ var _hmt = _hmt || [];
   s.parentNode.insertBefore(hm, s);
 })();
 </script>
+    <style>
+        /* 全局重置 + 优雅字体 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
+        body {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #0b0d15;
+            /* 深邃底色，衬托文字 */
+            background-image: radial-gradient(circle at 20% 30%, #1a1f2f 0%, #0b0d15 80%);
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            padding: 1.5rem;
+            margin: 0;
+            /* 柔化边缘 */
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* 卡片容器 —— 纯粹聚焦 */
+        .entry-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(2px);
+            -webkit-backdrop-filter: blur(2px);
+            border-radius: 4rem;
+            padding: 3rem 5.5rem;
+            box-shadow: 0 20px 40px -12px rgba(0, 0, 0, 0.8), 0 0 0 1px rgba(255, 255, 255, 0.04);
+            transition: transform 0.2s ease, box-shadow 0.3s ease;
+            text-align: center;
+            /* 让内部链接撑满交互区域 */
+            display: inline-block;
+            border: 1px solid rgba(255, 255, 255, 0.03);
+        }
+
+        /* 在移动端稍微缩小内边距，保持舒适 */
+        @media (max-width: 480px) {
+            .entry-card {
+                padding: 2.5rem 3rem;
+                border-radius: 3rem;
+            }
+        }
+
+        /* 核心：点击进入 —— 四个字，极致简约 */
+        .entry-link {
+            display: inline-block;
+            font-size: clamp(2.8rem, 12vw, 5.6rem);
+            font-weight: 500;
+            letter-spacing: 0.04em;
+            text-decoration: none;
+            color: #f0f3fa;
+            background: linear-gradient(135deg, #f0f3fa 0%, #b9c8f0 90%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            /* 保留文字颜色作为后备 */
+            color: #eef3ff;
+            text-shadow: 0 0 20px rgba(120, 160, 255, 0.15);
+            transition: all 0.25s cubic-bezier(0.2, 0, 0, 1);
+            position: relative;
+            padding: 0.1rem 0.2rem;
+            /* 扩大点击区域，同时不干扰视觉 */
+            cursor: pointer;
+        }
+
+        /* 悬停/触摸反馈 —— 微妙光晕 + 轻微上浮 */
+        .entry-link:hover {
+            transform: scale(1.02) translateY(-2px);
+            text-shadow: 0 0 40px rgba(140, 180, 255, 0.4), 0 0 80px rgba(100, 150, 255, 0.2);
+            -webkit-text-fill-color: transparent;
+            background: linear-gradient(135deg, #ffffff 0%, #c0d4ff 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+        }
+
+        /* 点击（激活）瞬间反馈 */
+        .entry-link:active {
+            transform: scale(0.96) translateY(0px);
+            transition-duration: 0.08s;
+            text-shadow: 0 0 30px rgba(255, 255, 255, 0.3);
+        }
+
+        /* 焦点可见性 (键盘访问) */
+        .entry-link:focus-visible {
+            outline: 3px solid rgba(180, 210, 255, 0.6);
+            outline-offset: 12px;
+            border-radius: 20px;
+            background: transparent;
+        }
+
+        /* 优雅的下划线装饰 —— 只在悬停时出现的一抹光 */
+        .entry-link::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -6px;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(90deg, transparent, rgba(200, 220, 255, 0.4), transparent);
+            border-radius: 20px;
+            opacity: 0;
+            transition: opacity 0.3s ease, transform 0.3s ease;
+            transform: scaleX(0.8);
+        }
+
+        .entry-link:hover::after {
+            opacity: 1;
+            transform: scaleX(1);
+        }
+
+        /* 极简底部微标 —— 仅用于氛围，不干扰视线 */
+        .footnote {
+            position: fixed;
+            bottom: 1.8rem;
+            left: 0;
+            right: 0;
+            text-align: center;
+            font-size: 0.75rem;
+            letter-spacing: 0.2em;
+            color: rgba(255, 255, 255, 0.15);
+            font-weight: 300;
+            pointer-events: none;
+            user-select: none;
+            backdrop-filter: blur(2px);
+            padding: 0.5rem;
+        }
+
+        .footnote span {
+            background: rgba(0, 0, 0, 0.2);
+            padding: 0.2rem 1.2rem;
+            border-radius: 40px;
+            backdrop-filter: blur(4px);
+            border: 1px solid rgba(255, 255, 255, 0.02);
+        }
+
+        /* 完全无干扰，只是作为背景上的一个微弱存在 */
+        @media (max-width: 480px) {
+            .footnote {
+                bottom: 1rem;
+                font-size: 0.6rem;
+                letter-spacing: 0.1em;
+            }
+            .footnote span {
+                padding: 0.15rem 0.8rem;
+                background: rgba(0, 0, 0, 0.15);
+            }
+        }
+
+        /* 更细腻的暗色模式适配 (其实已经深色) 保留亮色偏好兼容 */
+        @media (prefers-color-scheme: light) {
+            body {
+                background: #f2f5fe;
+                background-image: radial-gradient(circle at 30% 40%, #ffffff 0%, #e6ecf9 100%);
+            }
+            .entry-card {
+                background: rgba(255, 255, 255, 0.4);
+                backdrop-filter: blur(8px);
+                -webkit-backdrop-filter: blur(8px);
+                border: 1px solid rgba(255, 255, 255, 0.5);
+                box-shadow: 0 20px 40px -12px rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(255, 255, 255, 0.5);
+            }
+            .entry-link {
+                background: linear-gradient(145deg, #1a253b, #2b3b5c);
+                -webkit-background-clip: text;
+                background-clip: text;
+                -webkit-text-fill-color: transparent;
+                color: #1f2a40;
+                text-shadow: 0 2px 10px rgba(50, 80, 180, 0.1);
+            }
+            .entry-link:hover {
+                background: linear-gradient(145deg, #0d162b, #1f3259);
+                -webkit-background-clip: text;
+                background-clip: text;
+                -webkit-text-fill-color: transparent;
+                text-shadow: 0 0 30px rgba(70, 120, 255, 0.2);
+            }
+            .entry-link::after {
+                background: linear-gradient(90deg, transparent, rgba(60, 100, 200, 0.3), transparent);
+            }
+            .footnote {
+                color: rgba(0, 0, 0, 0.2);
+            }
+            .footnote span {
+                background: rgba(255, 255, 255, 0.3);
+                border: 1px solid rgba(0, 0, 0, 0.03);
+            }
+        }
+
+        /* 确保链接可点击区域完整覆盖卡片，但视觉上只有文字 */
+        .entry-card a {
+            display: inline-block;
+            width: 100%;
+            text-decoration: none;
+        }
+
+        /* 针对触摸优化，去掉移动端额外点击高亮 */
+        .entry-link {
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        /* 辅以非常克制的入场动画 */
+        .entry-card {
+            animation: fadeSlide 0.9s cubic-bezier(0.15, 0.9, 0.25, 1) forwards;
+            opacity: 0;
+            transform: translateY(20px) scale(0.98);
+        }
+
+        @keyframes fadeSlide {
+            0% {
+                opacity: 0;
+                transform: translateY(24px) scale(0.96);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+
+        /* 对于减少动画偏好，直接显示 */
+        @media (prefers-reduced-motion: reduce) {
+            .entry-card {
+                animation: none;
+                opacity: 1;
+                transform: none;
+            }
+            .entry-link::after {
+                display: none;
+            }
+            .entry-link:hover {
+                transform: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 纯粹的“点击进入”卡片 -->
+    <div class="entry-card" role="main" aria-label="入口">
+        <a href="#" class="entry-link" id="enterButton" aria-label="点击进入">
+            点击进入
+        </a>
+    </div>
+
+    <!-- 极简脚标 —— 仅装饰，无功能干扰 -->
+    <div class="footnote" aria-hidden="true">
+        <span>· 即刻 ·</span>
+    </div>
+
+    <script>
+        (function() {
+            // 只做一件事：让“点击进入”真正有进入的行为反馈
+            // 并且尊重用户可能的自定义跳转，但目前仅为演示，点击后展示轻提示，
+            // 同时保留点击的视觉反馈。
+            const entryLink = document.getElementById('enterButton');
+
+            if (!entryLink) return;
+
+            // 处理点击事件：既是演示，也体现“进入”的隐喻
+            function handleEnter(e) {
+                // 如果链接有真实的 href 且不是 #，则让浏览器正常跳转
+                // 但这里我们保持 href="#" ，用 JS 做演示效果，同时避免页面刷新
+                e.preventDefault();
+
+                // 给用户一个轻柔的触感反馈（对盲人或纯键盘无影响）
+                // 同时模仿“进入”动作 —— 这里展示一个简单的状态变化
+                // 但为了不破坏极简，只做微小的视觉涟漪 + 控制台提醒（如有需要可去掉）
+                const card = entryLink.closest('.entry-card');
+                if (card) {
+                    // 瞬间放大再缩回，模拟“按下进入”的物理感
+                    card.style.transition = 'transform 0.12s cubic-bezier(0.2, 0.9, 0.4, 1)';
+                    card.style.transform = 'scale(0.96)';
+                    setTimeout(() => {
+                        card.style.transform = 'scale(1)';
+                    }, 120);
+                }
+
+                // 高亮反馈（文字闪白）
+                entryLink.style.transition = 'text-shadow 0.1s';
+                entryLink.style.textShadow = '0 0 60px rgba(255,255,255,0.8), 0 0 120px rgba(180, 200, 255, 0.5)';
+                setTimeout(() => {
+                    entryLink.style.textShadow = '';
+                }, 200);
+
+                // 实际的“进入”动作：可在此处替换为真实跳转，例如：
+                // window.location.href = 'https://example.com/dashboard';
+                // 但因为没有指定目标，我们用一段优雅的提示代替，同时不阻碍未来扩展。
+
+                // 用温和的方式告知“已触发进入”—— 但因为是单页“点击进入”，
+                // 更符合直觉的做法是模拟一个“进入”动作，例如弹窗或跳转。
+                // 我们使用一个非常微弱的控制台提示，并在界面上显示一个瞬间的“欢迎”气泡？
+                // 为了保持极简，就不增加额外dom了。但是可以给一个很短暂的“进入”状态。
+                // 或者采用更现代的做法：触发一个自定义事件，但这里直接展示一个文字变化。
+                // 但我认为只保留纯文字“点击进入”更干净，故只做反馈动画而不修改文字。
+                // 如果要做演示，可以使用 alert 但会破坏体验。所以我们采用一种高级的方法：
+                // 利用 :active 已经做了样式，这里我们额外触发一次“闪光”即可
+
+                // 额外添加一个瞬间类，模拟“进入”感
+                entryLink.classList.add('enter-flash');
+                setTimeout(() => {
+                    entryLink.classList.remove('enter-flash');
+                }, 300);
+
+                // 可选的：如果你希望点击后跳转到某个地址，取消注释下面一行，并修改URL
+                window.location.href = 'https://www.bk138.com/';
+                // 目前为纯展示，只做反馈。
+                console.log('✨ 点击进入 · 欢迎');
+            }
+
+            // 绑定事件
+            entryLink.addEventListener('click', handleEnter);
+
+            // 为了键盘支持，Enter 或 Space 已经由浏览器默认触发 click，无需额外处理。
+            // 同时增加一个微小的自定义样式用于闪动
+            const style = document.createElement('style');
+            style.textContent = `
+                        .entry-link.enter-flash {
+                            text-shadow: 0 0 80px rgba(255, 255, 255, 0.7), 0 0 160px rgba(150, 180, 255, 0.3) !important;
+                            transition: text-shadow 0.05s;
+                        }
+                        @media (prefers-color-scheme: light) {
+                            .entry-link.enter-flash {
+                                text-shadow: 0 0 60px rgba(50, 100, 255, 0.4), 0 0 120px rgba(30, 80, 200, 0.2) !important;
+                            }
+                        }
+                    `;
+            document.head.appendChild(style);
+
+            // 额外: 如果用户点击卡片空白区域（但卡片内只有链接），不会触发，但我们确保卡片点击也跳转？
+            // 但为了最佳实践，让卡片本身点击也触发链接（但链接已包裹整个卡片内容）
+            // 因为a标签是inline-block且宽度100%，点击卡片任意位置都会触发链接。
+            // 但是我们的卡片有内边距，点击内边距区域其实点到了a标签（因为a是inline-block，宽度100%）
+            // 然而 padding 区域属于 a 标签吗？是的，因为 a 是 display: inline-block; 且宽度100%，
+            // padding 会撑开a，所以点击内边距区域也是点击a，完美。
+
+            // 如果未来想扩展成真正可配置的入口，可以在此添加。
+            // 无额外操作，保持简洁。
+        })();
+    </script>
+</body>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?4d2cd513dfe97aab3119661a69c3561b";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
 </html>
